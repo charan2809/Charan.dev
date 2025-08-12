@@ -3,463 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebCraft Agency - Premium Front-End Development</title>
+    <title>Techcorp - Premium Technology Solutions</title>
+    <meta name="description" content="Techcorp delivers cutting-edge technology solutions for enterprise clients, investors, and startups. Experience innovation, trust, and sophistication.">
     
-    <!-- Google Fonts - Poppins -->
+    <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiMxODM2NTEiLz4KPHR1c3QgeD0iOCIgeT0iMTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIj5UQzwvdGV4dD4KPC9zdmc+">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle dark/light theme" data-tooltip="Switch Theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-text">WebCraft</span>
+                <a href="#hero" aria-label="Techcorp homepage">
+                    <span class="logo-text">Techcorp</span>
+                </a>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#hero" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#portfolio" class="nav-link">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#case-studies" class="nav-link">Case Studies</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testimonials" class="nav-link">Testimonials</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#blog" class="nav-link">Insights</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+            
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="#hero" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#services" role="menuitem">Services</a></li>
+                <li role="none"><a href="#products" role="menuitem">Solutions</a></li>
+                <li role="none"><a href="#case-studies" role="menuitem">Case Studies</a></li>
+                <li role="none"><a href="#testimonials" role="menuitem">Clients</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
             </ul>
-            <div class="nav-controls">
-                <button class="theme-toggle" id="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <div class="hamburger" id="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title animate-fade-up">
-                    Crafting Digital Experiences That <span class="text-primary">Convert</span>
+    <section id="hero" class="hero" role="banner">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-professional-office-building-establishing-shot-43331-large.mp4" type="video/mp4">
+                <!-- Fallback background image -->
+            </video>
+            <div class="hero-overlay" aria-hidden="true"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text fade-in-up">
+                <h1 class="hero-title">
+                    <span class="hero-title-main">Innovating Tomorrow's</span>
+                    <span class="hero-title-accent">Technology Solutions</span>
                 </h1>
-                <p class="hero-subtitle animate-fade-up delay-1">
-                    We're a premium front-end development agency specializing in creating stunning, 
-                    high-performance websites that drive results for your business.
+                <p class="hero-subtitle">
+                    Empowering enterprises, investors, and startups with cutting-edge technology 
+                    solutions that drive unprecedented growth and innovation.
                 </p>
-                <button class="cta-button animate-fade-up delay-2">
-                    <span>Let's Work Together</span>
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-            </div>
-            <div class="hero-illustration">
-                <div class="illustration-container animate-fade-up delay-3">
-                    <!-- Animated SVG illustration will be added here -->
-                    <svg viewBox="0 0 500 400" class="hero-svg">
-                        <defs>
-                            <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#603fff;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <!-- Developer workspace illustration -->
-                        <rect x="50" y="80" width="400" height="280" rx="20" fill="var(--card-bg)" stroke="var(--border-color)" stroke-width="2"/>
-                        <rect x="70" y="100" width="360" height="20" rx="10" fill="var(--border-color)"/>
-                        <circle cx="90" cy="110" r="5" fill="#ff5f56"/>
-                        <circle cx="110" cy="110" r="5" fill="#ffbd2e"/>
-                        <circle cx="130" cy="110" r="5" fill="#27ca3f"/>
-                        <rect x="70" y="140" width="120" height="80" rx="8" fill="url(#primaryGradient)" opacity="0.8"/>
-                        <rect x="210" y="140" width="100" height="15" rx="7" fill="var(--text-secondary)" opacity="0.6"/>
-                        <rect x="210" y="170" width="140" height="15" rx="7" fill="var(--text-secondary)" opacity="0.4"/>
-                        <rect x="210" y="200" width="80" height="15" rx="7" fill="var(--text-secondary)" opacity="0.3"/>
-                        <rect x="70" y="240" width="260" height="100" rx="8" fill="var(--bg-secondary)" stroke="var(--border-color)"/>
-                        <circle cx="380" cy="180" r="30" fill="url(#primaryGradient)" opacity="0.2"/>
-                        <circle cx="380" cy="180" r="20" fill="url(#primaryGradient)" opacity="0.4"/>
-                        <circle cx="380" cy="180" r="10" fill="url(#primaryGradient)"/>
-                    </svg>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary" role="button">Start Your Journey</a>
+                    <a href="#about" class="btn btn-secondary" role="button">Discover More</a>
                 </div>
             </div>
         </div>
+        
+        <div class="scroll-indicator" aria-hidden="true">
+            <div class="scroll-arrow"></div>
+            <span class="scroll-text">Scroll to explore</span>
+        </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- About Us Section -->
+    <section id="about" class="about section" role="main">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About WebCraft Agency</h2>
-                <p class="section-subtitle">
-                    We transform ideas into exceptional digital experiences
-                </p>
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">About Techcorp</h2>
+                <p class="section-subtitle">Building the future through innovative technology</p>
             </div>
+            
             <div class="about-content">
-                <div class="about-text">
-                    <h3>Our Story</h3>
+                <div class="about-text fade-in-left">
+                    <h3>Excellence Redefined</h3>
                     <p>
-                        Founded with a passion for creating outstanding digital experiences, WebCraft Agency 
-                        has been at the forefront of front-end development for over 5 years. We believe that 
-                        great design and flawless functionality should go hand in hand to create websites that 
-                        not only look stunning but also drive real business results.
+                        For over two decades, Techcorp has stood at the forefront of technological innovation, 
+                        delivering transformative solutions that redefine industry standards. Our commitment to 
+                        excellence has earned the trust of Fortune 500 companies and emerging startups alike.
+                    </p>
+                    <p>
+                        We believe that technology should not just solve problems—it should anticipate them. 
+                        Our team of world-class experts combines deep technical expertise with strategic vision 
+                        to create solutions that drive lasting impact.
                     </p>
                     
-                    <h3>Our Values</h3>
-                    <div class="values-grid">
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <h4>Quality Code</h4>
-                            <p>Clean, maintainable, and scalable code that stands the test of time.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="500">0</span>
+                            <span class="stat-label">Enterprise Clients</span>
                         </div>
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h4>Client Focus</h4>
-                            <p>Your success is our success. We prioritize your goals and objectives.</p>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="25">0</span>
+                            <span class="stat-label">Years of Excellence</span>
                         </div>
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <h4>Innovation</h4>
-                            <p>Staying ahead of trends and technologies to deliver cutting-edge solutions.</p>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="1000">0</span>
+                            <span class="stat-label">Projects Delivered</span>
                         </div>
                     </div>
                 </div>
-                <div class="skills-container">
-                    <h3>Our Expertise</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <span class="skill-name">React & Next.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Vue.js & Nuxt.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">TypeScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="92"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">UI/UX Design</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="88"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Performance Optimization</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="93"></div>
-                            </div>
-                        </div>
-                    </div>
+                
+                <div class="about-image fade-in-right">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1926&auto=format&fit=crop" 
+                         alt="Modern corporate office space with glass architecture" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="services section" role="main">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header fade-in-up">
                 <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">
-                    Comprehensive front-end solutions tailored to your business needs
-                </p>
+                <p class="section-subtitle">Comprehensive technology solutions for every business challenge</p>
             </div>
+            
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card fade-in-up" style="--delay: 0.1s">
                     <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6"/>
+                            <path d="m15.5 4 6 6.5-6 6.5"/>
+                            <path d="m2 12 7-7 7 7-7 7-7-7z"/>
+                        </svg>
                     </div>
-                    <h3>Custom Web Development</h3>
-                    <p>
-                        Bespoke websites built from the ground up using modern frameworks and technologies 
-                        to deliver exceptional user experiences and optimal performance.
-                    </p>
-                    <ul class="service-features">
-                        <li>React/Vue.js Applications</li>
-                        <li>Progressive Web Apps</li>
-                        <li>Single Page Applications</li>
-                        <li>API Integration</li>
-                    </ul>
+                    <h3>Digital Transformation</h3>
+                    <p>Modernize your business with cutting-edge digital solutions that streamline operations and enhance customer experiences.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="service-card fade-in-up" style="--delay: 0.2s">
                     <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+                        </svg>
                     </div>
-                    <h3>UI/UX Design & Development</h3>
-                    <p>
-                        Transform your ideas into stunning, user-friendly interfaces that engage visitors 
-                        and drive conversions through thoughtful design and seamless functionality.
-                    </p>
-                    <ul class="service-features">
-                        <li>User Interface Design</li>
-                        <li>User Experience Optimization</li>
-                        <li>Prototyping & Wireframing</li>
-                        <li>Design System Creation</li>
-                    </ul>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Harness the power of artificial intelligence to unlock insights, automate processes, and drive intelligent decision-making.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="service-card fade-in-up" style="--delay: 0.3s">
                     <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
                     </div>
-                    <h3>Responsive Web Design</h3>
-                    <p>
-                        Ensure your website looks and performs flawlessly across all devices with our 
-                        mobile-first approach to responsive design and development.
-                    </p>
-                    <ul class="service-features">
-                        <li>Mobile-First Design</li>
-                        <li>Cross-Browser Compatibility</li>
-                        <li>Touch-Friendly Interfaces</li>
-                        <li>Performance Optimization</li>
-                    </ul>
+                    <h3>Cybersecurity</h3>
+                    <p>Protect your digital assets with enterprise-grade security solutions designed to defend against evolving threats.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="service-card fade-in-up" style="--delay: 0.4s">
                     <div class="service-icon">
-                        <i class="fas fa-shopping-cart"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                            <polyline points="2,17 12,22 22,17"/>
+                            <polyline points="2,12 12,17 22,12"/>
+                        </svg>
                     </div>
-                    <h3>E-commerce Solutions</h3>
-                    <p>
-                        Build powerful online stores that convert visitors into customers with secure, 
-                        fast, and user-friendly e-commerce platforms tailored to your business.
-                    </p>
-                    <ul class="service-features">
-                        <li>Custom Shopping Cart</li>
-                        <li>Payment Gateway Integration</li>
-                        <li>Inventory Management</li>
-                        <li>Order Processing</li>
-                    </ul>
+                    <h3>Cloud Infrastructure</h3>
+                    <p>Scale your operations with robust, secure, and flexible cloud solutions tailored to your business needs.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="service-card fade-in-up" style="--delay: 0.5s">
                     <div class="service-icon">
-                        <i class="fas fa-tachometer-alt"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
                     </div>
-                    <h3>Performance Optimization</h3>
-                    <p>
-                        Maximize your website's speed and performance with advanced optimization techniques 
-                        that improve user experience and search engine rankings.
-                    </p>
-                    <ul class="service-features">
-                        <li>Core Web Vitals Optimization</li>
-                        <li>Image & Asset Optimization</li>
-                        <li>Code Splitting & Lazy Loading</li>
-                        <li>SEO Performance</li>
-                    </ul>
+                    <h3>Data Analytics</h3>
+                    <p>Transform raw data into actionable insights with advanced analytics and business intelligence solutions.</p>
                 </div>
                 
-                <div class="service-card">
+                <div class="service-card fade-in-up" style="--delay: 0.6s">
                     <div class="service-icon">
-                        <i class="fas fa-tools"></i>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="4"/>
+                            <path d="M16 8v5a3 3 0 0 0 6 0v-5a10 10 0 1 0-20 0v5a3 3 0 0 0 6 0V8"/>
+                        </svg>
                     </div>
-                    <h3>Maintenance & Support</h3>
-                    <p>
-                        Keep your website running smoothly with our comprehensive maintenance and support 
-                        services, ensuring security, updates, and continuous optimization.
-                    </p>
-                    <ul class="service-features">
-                        <li>Regular Updates & Patches</li>
-                        <li>Security Monitoring</li>
-                        <li>Bug Fixes & Improvements</li>
-                        <li>Technical Support</li>
-                    </ul>
+                    <h3>Strategic Consulting</h3>
+                    <p>Navigate complex technology decisions with expert guidance from our seasoned technology strategists.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <!-- Products/Solutions Section -->
+    <section id="products" class="products section" role="main">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Portfolio</h2>
-                <p class="section-subtitle">
-                    Showcasing our best work and successful client partnerships
-                </p>
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Solutions & Products</h2>
+                <p class="section-subtitle">Enterprise-grade solutions built for scale and performance</p>
             </div>
             
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web-design">Web Design</button>
-                <button class="filter-btn" data-filter="ui-ux">UI/UX</button>
-                <button class="filter-btn" data-filter="landing-pages">Landing Pages</button>
-                <button class="filter-btn" data-filter="e-commerce">E-commerce</button>
-            </div>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="web-design">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-laptop-code"></i>
-                            <span>TechCorp Website</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn" onclick="openPortfolioModal('project1')">
-                                View Details
-                            </button>
-                        </div>
+            <div class="products-showcase">
+                <div class="product-feature fade-in-left">
+                    <div class="product-content">
+                        <h3>TechCore Platform</h3>
+                        <p>
+                            Our flagship enterprise platform combines AI-driven analytics, 
+                            real-time monitoring, and seamless integration capabilities to 
+                            transform how businesses operate and make decisions.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Real-time data processing</li>
+                            <li>Advanced AI analytics</li>
+                            <li>Seamless third-party integrations</li>
+                            <li>Enterprise-grade security</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Learn More</a>
                     </div>
-                    <div class="portfolio-info">
-                        <h3>TechCorp Corporate Website</h3>
-                        <p>Modern corporate website with advanced animations</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Next.js</span>
-                            <span class="tag">GSAP</span>
-                        </div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" 
+                             alt="Advanced analytics dashboard interface" loading="lazy">
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="ui-ux">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>FinanceApp UI</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn" onclick="openPortfolioModal('project2')">
-                                View Details
-                            </button>
-                        </div>
+                <div class="product-feature fade-in-right">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=2074&auto=format&fit=crop" 
+                             alt="Mobile application interface design" loading="lazy">
                     </div>
-                    <div class="portfolio-info">
-                        <h3>FinanceApp Dashboard</h3>
-                        <p>Intuitive financial dashboard with data visualization</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">D3.js</span>
-                            <span class="tag">UI/UX</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="landing-pages">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-rocket"></i>
-                            <span>StartupLand</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn" onclick="openPortfolioModal('project3')">
-                                View Details
-                            </button>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Startup Landing Page</h3>
-                        <p>High-converting landing page for SaaS startup</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
+                    <div class="product-content">
+                        <h3>SecureVault Enterprise</h3>
+                        <p>
+                            Next-generation cybersecurity solution that provides comprehensive 
+                            protection against advanced threats while maintaining seamless user 
+                            experience and operational efficiency.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Zero-trust architecture</li>
+                            <li>Advanced threat detection</li>
+                            <li>Automated incident response</li>
+                            <li>Compliance management</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Explore Security</a>
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="e-commerce">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-shopping-bag"></i>
-                            <span>FashionStore</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn" onclick="openPortfolioModal('project4')">
-                                View Details
-                            </button>
-                        </div>
+                <div class="product-feature fade-in-left">
+                    <div class="product-content">
+                        <h3>CloudScale Infrastructure</h3>
+                        <p>
+                            Scalable cloud infrastructure solution designed for enterprises 
+                            requiring maximum reliability, performance, and flexibility 
+                            in their digital operations.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Auto-scaling capabilities</li>
+                            <li>99.99% uptime guarantee</li>
+                            <li>Global CDN network</li>
+                            <li>Advanced monitoring & analytics</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline">Discover Cloud</a>
                     </div>
-                    <div class="portfolio-info">
-                        <h3>Fashion E-commerce Platform</h3>
-                        <p>Complete e-commerce solution with custom features</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Stripe</span>
-                            <span class="tag">Node.js</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="web-design">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-utensils"></i>
-                            <span>Restaurant</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn" onclick="openPortfolioModal('project5')">
-                                View Details
-                            </button>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Restaurant Chain Website</h3>
-                        <p>Multi-location restaurant website with online ordering</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">Nuxt.js</span>
-                            <span class="tag">PWA</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="ui-ux">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>EduPlatform</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn" onclick="openPortfolioModal('project6')">
-                                View Details
-                            </button>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Educational Platform</h3>
-                        <p>Interactive learning platform with progress tracking</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">WebRTC</span>
-                        </div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop" 
+                             alt="Modern server room with organized infrastructure" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -467,791 +303,311 @@
     </section>
 
     <!-- Case Studies Section -->
-    <section id="case-studies" class="case-studies">
+    <section id="case-studies" class="case-studies section" role="main">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Case Studies</h2>
-                <p class="section-subtitle">
-                    Deep dives into our most successful client partnerships
-                </p>
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Success Stories</h2>
+                <p class="section-subtitle">Real results for real businesses</p>
             </div>
             
-            <div class="case-studies-container">
-                <div class="case-study-card active">
-                    <div class="case-study-header">
-                        <div class="case-study-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="case-study-title">
-                            <h3>E-commerce Revenue Boost</h3>
-                            <span class="case-study-client">RetailMax Inc.</span>
-                        </div>
-                        <div class="case-study-result">
-                            <span class="result-number">+187%</span>
-                            <span class="result-label">Revenue Increase</span>
-                        </div>
+            <div class="case-studies-grid">
+                <article class="case-study-card fade-in-up" style="--delay: 0.1s">
+                    <div class="case-study-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
+                             alt="Financial services building" loading="lazy">
                     </div>
                     <div class="case-study-content">
-                        <div class="case-study-summary">
-                            <p>
-                                RetailMax approached us with a outdated e-commerce platform that was losing customers 
-                                due to poor user experience and slow loading times. Our team redesigned their entire 
-                                shopping experience with a focus on conversion optimization.
-                            </p>
-                        </div>
-                        <div class="case-study-details">
-                            <div class="challenge">
-                                <h4>The Challenge</h4>
-                                <ul>
-                                    <li>High cart abandonment rate (78%)</li>
-                                    <li>Slow page load times (8+ seconds)</li>
-                                    <li>Poor mobile experience</li>
-                                    <li>Confusing checkout process</li>
-                                </ul>
-                            </div>
-                            <div class="solution">
-                                <h4>Our Solution</h4>
-                                <ul>
-                                    <li>Complete UX/UI redesign</li>
-                                    <li>Performance optimization</li>
-                                    <li>Mobile-first approach</li>
-                                    <li>Simplified checkout flow</li>
-                                    <li>A/B tested product pages</li>
-                                </ul>
-                            </div>
-                            <div class="results">
-                                <h4>Results</h4>
-                                <div class="results-grid">
-                                    <div class="result-item">
-                                        <span class="result-value">187%</span>
-                                        <span class="result-desc">Revenue Increase</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">65%</span>
-                                        <span class="result-desc">Lower Cart Abandonment</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">3.2s</span>
-                                        <span class="result-desc">Page Load Time</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">92%</span>
-                                        <span class="result-desc">Mobile Conversion Rate</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="case-study-category">Financial Services</div>
+                        <h3>Global Bank Digital Transformation</h3>
+                        <p>
+                            Revolutionized customer experience and operational efficiency for a leading 
+                            global bank through comprehensive digital transformation initiative.
+                        </p>
+                        <div class="case-study-results">
+                            <span class="result-metric">40% faster transactions</span>
+                            <span class="result-metric">60% cost reduction</span>
                         </div>
                     </div>
-                </div>
+                </article>
                 
-                <div class="case-study-card">
-                    <div class="case-study-header">
-                        <div class="case-study-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="case-study-title">
-                            <h3>User Engagement Transformation</h3>
-                            <span class="case-study-client">TechHub Platform</span>
-                        </div>
-                        <div class="case-study-result">
-                            <span class="result-number">+340%</span>
-                            <span class="result-label">User Engagement</span>
-                        </div>
+                <article class="case-study-card fade-in-up" style="--delay: 0.2s">
+                    <div class="case-study-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=2070&auto=format&fit=crop" 
+                             alt="Healthcare technology center" loading="lazy">
                     </div>
                     <div class="case-study-content">
-                        <div class="case-study-summary">
-                            <p>
-                                TechHub needed to increase user engagement on their learning platform. Through 
-                                comprehensive UX research and iterative design improvements, we transformed 
-                                their user experience and significantly boosted engagement metrics.
-                            </p>
-                        </div>
-                        <div class="case-study-details">
-                            <div class="challenge">
-                                <h4>The Challenge</h4>
-                                <ul>
-                                    <li>Low user retention (23%)</li>
-                                    <li>Complex navigation system</li>
-                                    <li>Poor content discoverability</li>
-                                    <li>Lack of progress tracking</li>
-                                </ul>
-                            </div>
-                            <div class="solution">
-                                <h4>Our Solution</h4>
-                                <ul>
-                                    <li>User journey mapping</li>
-                                    <li>Simplified navigation</li>
-                                    <li>Personalized content feeds</li>
-                                    <li>Gamification elements</li>
-                                    <li>Progress visualization</li>
-                                </ul>
-                            </div>
-                            <div class="results">
-                                <h4>Results</h4>
-                                <div class="results-grid">
-                                    <div class="result-item">
-                                        <span class="result-value">340%</span>
-                                        <span class="result-desc">User Engagement</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">78%</span>
-                                        <span class="result-desc">User Retention</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">45%</span>
-                                        <span class="result-desc">Course Completion</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">12min</span>
-                                        <span class="result-desc">Avg. Session Time</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="case-study-category">Healthcare</div>
+                        <h3>AI-Powered Medical Diagnostics</h3>
+                        <p>
+                            Implemented machine learning algorithms to enhance diagnostic accuracy 
+                            and reduce patient wait times for a major healthcare provider.
+                        </p>
+                        <div class="case-study-results">
+                            <span class="result-metric">95% diagnostic accuracy</span>
+                            <span class="result-metric">50% faster results</span>
                         </div>
                     </div>
-                </div>
+                </article>
                 
-                <div class="case-study-card">
-                    <div class="case-study-header">
-                        <div class="case-study-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <div class="case-study-title">
-                            <h3>Startup Growth Acceleration</h3>
-                            <span class="case-study-client">InnovateLab</span>
-                        </div>
-                        <div class="case-study-result">
-                            <span class="result-number">+520%</span>
-                            <span class="result-label">Lead Generation</span>
-                        </div>
+                <article class="case-study-card fade-in-up" style="--delay: 0.3s">
+                    <div class="case-study-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop" 
+                             alt="Modern retail environment" loading="lazy">
                     </div>
                     <div class="case-study-content">
-                        <div class="case-study-summary">
-                            <p>
-                                InnovateLab, a promising startup, needed a high-converting landing page to attract 
-                                investors and customers. Our conversion-focused design and development approach 
-                                delivered exceptional results that exceeded all expectations.
-                            </p>
-                        </div>
-                        <div class="case-study-details">
-                            <div class="challenge">
-                                <h4>The Challenge</h4>
-                                <ul>
-                                    <li>Low lead conversion (2.1%)</li>
-                                    <li>Unclear value proposition</li>
-                                    <li>Generic design approach</li>
-                                    <li>Poor funnel optimization</li>
-                                </ul>
-                            </div>
-                            <div class="solution">
-                                <h4>Our Solution</h4>
-                                <ul>
-                                    <li>Conversion-focused design</li>
-                                    <li>Clear value proposition</li>
-                                    <li>Social proof integration</li>
-                                    <li>Optimized lead capture</li>
-                                    <li>Multi-variant testing</li>
-                                </ul>
-                            </div>
-                            <div class="results">
-                                <h4>Results</h4>
-                                <div class="results-grid">
-                                    <div class="result-item">
-                                        <span class="result-value">520%</span>
-                                        <span class="result-desc">Lead Generation</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">13.2%</span>
-                                        <span class="result-desc">Conversion Rate</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">$2.3M</span>
-                                        <span class="result-desc">Funding Raised</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">150%</span>
-                                        <span class="result-desc">User Acquisition</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="case-study-category">Retail</div>
+                        <h3>Omnichannel Commerce Platform</h3>
+                        <p>
+                            Created unified commerce experience across all channels, driving significant 
+                            revenue growth and customer satisfaction improvements.
+                        </p>
+                        <div class="case-study-results">
+                            <span class="result-metric">200% revenue increase</span>
+                            <span class="result-metric">85% customer satisfaction</span>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="case-studies-controls">
-                <button class="case-study-nav prev" onclick="navigateCaseStudy(-1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <div class="case-study-indicators">
-                    <span class="indicator active"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                </div>
-                <button class="case-study-nav next" onclick="navigateCaseStudy(1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
+    <!-- Clients & Testimonials Section -->
+    <section id="testimonials" class="testimonials section" role="main">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What Our Clients Say</h2>
-                <p class="section-subtitle">
-                    Trusted by businesses worldwide for exceptional results
-                </p>
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Trusted by Industry Leaders</h2>
+                <p class="section-subtitle">What our clients say about our partnership</p>
             </div>
             
-            <div class="testimonials-slider">
+            <!-- Client Logos -->
+            <div class="clients-logos fade-in-up">
+                <div class="logo-item">TechGiant</div>
+                <div class="logo-item">InnovaCorp</div>
+                <div class="logo-item">GlobalBank</div>
+                <div class="logo-item">HealthTech</div>
+                <div class="logo-item">RetailMax</div>
+                <div class="logo-item">CloudFirst</div>
+            </div>
+            
+            <!-- Testimonials Carousel -->
+            <div class="testimonials-carousel fade-in-up">
                 <div class="testimonial-track">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="testimonial-text">
-                                "WebCraft Agency exceeded our expectations in every way. Their attention to detail, 
-                                technical expertise, and commitment to our success made them the perfect partner for 
-                                our digital transformation. Our new website has increased our leads by 300%."
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 100 100" class="avatar-svg">
-                                        <circle cx="50" cy="50" r="50" fill="url(#primaryGradient)"/>
-                                        <circle cx="50" cy="35" r="15" fill="white"/>
-                                        <path d="M20 80 Q20 60 50 60 Q80 60 80 80 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <div class="author-info">
-                                    <h4>Sarah Johnson</h4>
-                                    <span>CEO, TechCorp Solutions</span>
-                                </div>
+                    <div class="testimonial-card active">
+                        <blockquote>
+                            "Techcorp transformed our entire technology infrastructure. Their expertise 
+                            and dedication to excellence is unmatched. The results exceeded all our expectations."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" 
+                                 alt="CEO John Anderson" loading="lazy">
+                            <div class="author-info">
+                                <cite class="author-name">John Anderson</cite>
+                                <span class="author-position">CEO, TechGiant Corp</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="testimonial-text">
-                                "The team at WebCraft delivered a stunning e-commerce platform that perfectly captures 
-                                our brand essence. The user experience is flawless, and our conversion rates have 
-                                improved dramatically. Highly recommended for any serious business."
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 100 100" class="avatar-svg">
-                                        <circle cx="50" cy="50" r="50" fill="#34d399"/>
-                                        <circle cx="50" cy="35" r="15" fill="white"/>
-                                        <path d="M20 80 Q20 60 50 60 Q80 60 80 80 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <div class="author-info">
-                                    <h4>Michael Chen</h4>
-                                    <span>Founder, RetailMax Inc.</span>
-                                </div>
+                        <blockquote>
+                            "The AI solutions implemented by Techcorp have revolutionized our decision-making 
+                            process. We've seen remarkable improvements in efficiency and accuracy."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=1887&auto=format&fit=crop" 
+                                 alt="CTO Sarah Chen" loading="lazy">
+                            <div class="author-info">
+                                <cite class="author-name">Sarah Chen</cite>
+                                <span class="author-position">CTO, InnovaCorp</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="testimonial-text">
-                                "Working with WebCraft was a game-changer for our startup. They understood our vision 
-                                and brought it to life with a website that not only looks amazing but also performs 
-                                exceptionally well. Our user engagement has increased by 400%."
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 100 100" class="avatar-svg">
-                                        <circle cx="50" cy="50" r="50" fill="#f59e0b"/>
-                                        <circle cx="50" cy="35" r="15" fill="white"/>
-                                        <path d="M20 80 Q20 60 50 60 Q80 60 80 80 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <div class="author-info">
-                                    <h4>Emily Rodriguez</h4>
-                                    <span>CTO, InnovateLab</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="testimonial-text">
-                                "The professionalism and expertise of the WebCraft team is unmatched. They delivered 
-                                a complex web application on time and within budget, while maintaining the highest 
-                                quality standards. Our customers love the new interface."
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 100 100" class="avatar-svg">
-                                        <circle cx="50" cy="50" r="50" fill="#ef4444"/>
-                                        <circle cx="50" cy="35" r="15" fill="white"/>
-                                        <path d="M20 80 Q20 60 50 60 Q80 60 80 80 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <div class="author-info">
-                                    <h4>David Thompson</h4>
-                                    <span>Director, TechHub Platform</span>
-                                </div>
+                        <blockquote>
+                            "Working with Techcorp was a game-changer. Their strategic approach and technical 
+                            excellence delivered results that significantly impacted our bottom line."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop" 
+                                 alt="President Michael Rodriguez" loading="lazy">
+                            <div class="author-info">
+                                <cite class="author-name">Michael Rodriguez</cite>
+                                <span class="author-position">President, GlobalBank</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="testimonials-controls">
-                <button class="testimonial-nav prev" onclick="navigateTestimonial(-1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <div class="testimonial-indicators">
-                    <span class="indicator active"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
+                
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn active" data-slide="0" aria-label="View testimonial 1"></button>
+                    <button class="testimonial-btn" data-slide="1" aria-label="View testimonial 2"></button>
+                    <button class="testimonial-btn" data-slide="2" aria-label="View testimonial 3"></button>
                 </div>
-                <button class="testimonial-nav next" onclick="navigateTestimonial(1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog/Insights Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Latest Insights</h2>
-                <p class="section-subtitle">
-                    Stay updated with the latest trends and best practices in web development
-                </p>
-            </div>
-            
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-code"></i>
-                            <span>React 18 Features</span>
-                        </div>
-                        <div class="blog-category">Development</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                December 15, 2023
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                5 min read
-                            </span>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="#" onclick="openBlogPost('react-18-features')">
-                                Mastering React 18: New Features and Performance Improvements
-                            </a>
-                        </h3>
-                        <p class="blog-excerpt">
-                            Discover the latest features in React 18 including concurrent rendering, 
-                            automatic batching, and Suspense improvements that will revolutionize your development workflow.
-                        </p>
-                        <div class="blog-footer">
-                            <div class="blog-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 40 40" class="avatar-svg">
-                                        <circle cx="20" cy="20" r="20" fill="url(#primaryGradient)"/>
-                                        <circle cx="20" cy="14" r="6" fill="white"/>
-                                        <path d="M8 32 Q8 24 20 24 Q32 24 32 32 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <span class="author-name">Alex Johnson</span>
-                            </div>
-                            <a href="#" class="read-more" onclick="openBlogPost('react-18-features')">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-palette"></i>
-                            <span>UX Trends 2024</span>
-                        </div>
-                        <div class="blog-category">Design</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                December 10, 2023
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                7 min read
-                            </span>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="#" onclick="openBlogPost('ux-trends-2024')">
-                                UX Design Trends 2024: What's Next for User Experience
-                            </a>
-                        </h3>
-                        <p class="blog-excerpt">
-                            Explore the emerging UX design trends that will shape user experiences in 2024, 
-                            from AI-powered interfaces to immersive micro-interactions and accessibility-first design.
-                        </p>
-                        <div class="blog-footer">
-                            <div class="blog-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 40 40" class="avatar-svg">
-                                        <circle cx="20" cy="20" r="20" fill="#34d399"/>
-                                        <circle cx="20" cy="14" r="6" fill="white"/>
-                                        <path d="M8 32 Q8 24 20 24 Q32 24 32 32 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <span class="author-name">Sarah Williams</span>
-                            </div>
-                            <a href="#" class="read-more" onclick="openBlogPost('ux-trends-2024')">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <span>Web Performance</span>
-                        </div>
-                        <div class="blog-category">Performance</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                December 5, 2023
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                6 min read
-                            </span>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="#" onclick="openBlogPost('web-performance-optimization')">
-                                Advanced Web Performance Optimization Techniques for 2024
-                            </a>
-                        </h3>
-                        <p class="blog-excerpt">
-                            Learn cutting-edge performance optimization strategies including Core Web Vitals improvements, 
-                            advanced caching techniques, and modern loading patterns for lightning-fast websites.
-                        </p>
-                        <div class="blog-footer">
-                            <div class="blog-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 40 40" class="avatar-svg">
-                                        <circle cx="20" cy="20" r="20" fill="#f59e0b"/>
-                                        <circle cx="20" cy="14" r="6" fill="white"/>
-                                        <path d="M8 32 Q8 24 20 24 Q32 24 32 32 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <span class="author-name">Mike Chen</span>
-                            </div>
-                            <a href="#" class="read-more" onclick="openBlogPost('web-performance-optimization')">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Web Security</span>
-                        </div>
-                        <div class="blog-category">Security</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                November 28, 2023
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                8 min read
-                            </span>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="#" onclick="openBlogPost('frontend-security-best-practices')">
-                                Frontend Security Best Practices: Protecting Your Web Applications
-                            </a>
-                        </h3>
-                        <p class="blog-excerpt">
-                            Comprehensive guide to securing your frontend applications against modern threats including 
-                            XSS attacks, CSRF vulnerabilities, and implementing Content Security Policy effectively.
-                        </p>
-                        <div class="blog-footer">
-                            <div class="blog-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 40 40" class="avatar-svg">
-                                        <circle cx="20" cy="20" r="20" fill="#ef4444"/>
-                                        <circle cx="20" cy="14" r="6" fill="white"/>
-                                        <path d="M8 32 Q8 24 20 24 Q32 24 32 32 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <span class="author-name">Lisa Rodriguez</span>
-                            </div>
-                            <a href="#" class="read-more" onclick="openBlogPost('frontend-security-best-practices')">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact section" role="main">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Let's Start Your Project</h2>
-                <p class="section-subtitle">
-                    Ready to transform your digital presence? Get in touch with our team today.
-                </p>
+            <div class="section-header fade-in-up">
+                <h2 class="section-title">Start Your Transformation</h2>
+                <p class="section-subtitle">Ready to revolutionize your business? Let's discuss your vision.</p>
             </div>
             
             <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email Us</h4>
-                            <p>hello@webcraftagency.com</p>
-                            <p>info@webcraftagency.com</p>
-                        </div>
-                    </div>
+                <div class="contact-info fade-in-left">
+                    <h3>Get in Touch</h3>
+                    <p>
+                        Our team of experts is ready to help you navigate your technology journey. 
+                        Whether you're looking to transform your operations or explore new opportunities, 
+                        we're here to make it happen.
+                    </p>
                     
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Headquarters</h4>
+                                <p>One Technology Plaza<br>San Francisco, CA 94105</p>
+                            </div>
                         </div>
-                        <div class="contact-details">
-                            <h4>Call Us</h4>
-                            <p>+1 (555) 123-4567</p>
-                            <p>+1 (555) 987-6543</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>hello@techcorp.com</p>
+                            </div>
                         </div>
-                        <div class="contact-details">
-                            <h4>Visit Us</h4>
-                            <p>123 Innovation Street</p>
-                            <p>San Francisco, CA 94105</p>
-                        </div>
-                    </div>
-                    
-                    <div class="location-illustration">
-                        <svg viewBox="0 0 300 200" class="location-svg">
-                            <defs>
-                                <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#603fff;stop-opacity:0.1" />
-                                    <stop offset="100%" style="stop-color:#603fff;stop-opacity:0.3" />
-                                </linearGradient>
-                            </defs>
-                            <!-- Map background -->
-                            <rect width="300" height="200" fill="url(#mapGradient)" rx="15"/>
-                            <!-- Buildings -->
-                            <rect x="50" y="120" width="30" height="60" fill="var(--text-secondary)" opacity="0.3"/>
-                            <rect x="90" y="100" width="25" height="80" fill="var(--text-secondary)" opacity="0.4"/>
-                            <rect x="125" y="110" width="35" height="70" fill="var(--text-secondary)" opacity="0.3"/>
-                            <rect x="170" y="90" width="28" height="90" fill="var(--text-secondary)" opacity="0.4"/>
-                            <rect x="210" y="105" width="32" height="75" fill="var(--text-secondary)" opacity="0.3"/>
-                            <!-- Location pin -->
-                            <circle cx="150" cy="100" r="20" fill="url(#primaryGradient)" opacity="0.8"/>
-                            <circle cx="150" cy="100" r="8" fill="white"/>
-                            <!-- Streets -->
-                            <line x1="0" y1="180" x2="300" y2="180" stroke="var(--border-color)" stroke-width="2"/>
-                            <line x1="150" y1="0" x2="150" y2="200" stroke="var(--border-color)" stroke-width="1" opacity="0.5"/>
-                        </svg>
                     </div>
                 </div>
                 
-                <form class="contact-form" id="contact-form">
+                <form class="contact-form fade-in-right" aria-label="Contact form">
                     <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                        <span class="error-message" id="name-error"></span>
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required aria-describedby="name-error">
+                        <span class="error-message" id="name-error" role="alert"></span>
                     </div>
                     
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                        <span class="error-message" id="email-error"></span>
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required aria-describedby="email-error">
+                        <span class="error-message" id="email-error" role="alert"></span>
                     </div>
                     
                     <div class="form-group">
-                        <label for="company">Company (Optional)</label>
+                        <label for="company">Company</label>
                         <input type="text" id="company" name="company">
                     </div>
                     
                     <div class="form-group">
-                        <label for="budget">Project Budget</label>
-                        <select id="budget" name="budget" required>
-                            <option value="">Select your budget range</option>
-                            <option value="5k-10k">$5,000 - $10,000</option>
-                            <option value="10k-25k">$10,000 - $25,000</option>
-                            <option value="25k-50k">$25,000 - $50,000</option>
-                            <option value="50k+">$50,000+</option>
+                        <label for="service">Service Interest</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="digital-transformation">Digital Transformation</option>
+                            <option value="ai-ml">AI & Machine Learning</option>
+                            <option value="cybersecurity">Cybersecurity</option>
+                            <option value="cloud-infrastructure">Cloud Infrastructure</option>
+                            <option value="data-analytics">Data Analytics</option>
+                            <option value="consulting">Strategic Consulting</option>
                         </select>
-                        <span class="error-message" id="budget-error"></span>
                     </div>
                     
                     <div class="form-group">
-                        <label for="message">Project Details</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
-                        <span class="error-message" id="message-error"></span>
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required aria-describedby="message-error" 
+                                placeholder="Tell us about your project or questions..."></textarea>
+                        <span class="error-message" id="message-error" role="alert"></span>
                     </div>
                     
-                    <button type="submit" class="submit-button">
-                        <span class="button-text">Send Message</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <span class="logo-text">WebCraft</span>
-                    </div>
-                    <p class="footer-description">
-                        Crafting exceptional digital experiences that drive results. 
-                        Your trusted partner for premium front-end development solutions.
-                    </p>
+                    <h4>Techcorp</h4>
+                    <p>Leading the future of technology innovation with solutions that transform businesses and drive growth.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link">
-                            <i class="fab fa-linkedin"></i>
+                        <a href="#" aria-label="LinkedIn" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
                         </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-dribbble"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-behance"></i>
+                        <a href="#" aria-label="Twitter" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
                         </a>
                     </div>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services">Web Development</a></li>
-                        <li><a href="#services">UI/UX Design</a></li>
-                        <li><a href="#services">E-commerce Solutions</a></li>
-                        <li><a href="#services">Performance Optimization</a></li>
-                        <li><a href="#services">Maintenance & Support</a></li>
+                    <ul>
+                        <li><a href="#services">Digital Transformation</a></li>
+                        <li><a href="#services">AI & Machine Learning</a></li>
+                        <li><a href="#services">Cybersecurity</a></li>
+                        <li><a href="#services">Cloud Infrastructure</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Company</h4>
-                    <ul class="footer-links">
+                    <ul>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#case-studies">Case Studies</a></li>
-                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#testimonials">Clients</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
                         <li><a href="#">Cookie Policy</a></li>
-                        <li><a href="#">Sitemap</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Compliance</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <div class="footer-divider"></div>
-                <div class="footer-bottom-content">
-                    <p class="copyright">
-                        © 2023 WebCraft Agency. All rights reserved. Crafted with ❤️ for exceptional digital experiences.
-                    </p>
-                    <div class="footer-bottom-links">
-                        <a href="#">Privacy</a>
-                        <a href="#">Terms</a>
-                        <a href="#">Cookies</a>
-                    </div>
-                </div>
+                <p>&copy; 2024 Techcorp. All rights reserved. Innovating tomorrow's technology solutions.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Portfolio Modal -->
-    <div id="portfolio-modal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closePortfolioModal()">&times;</span>
-            <div id="modal-body">
-                <!-- Dynamic content will be inserted here -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Custom JavaScript -->
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
