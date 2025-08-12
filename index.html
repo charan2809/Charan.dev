@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Front-End Web Developer Agency – Premium Portfolio</title>
+    <meta name="description" content="Premium front-end development agency specializing in performant, accessible, and beautiful web experiences." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header id="top" class="site-header">
+      <nav class="nav container" aria-label="Primary">
+        <a class="brand" href="#hero" aria-label="Go to hero">
+          <span class="brand-mark" aria-hidden="true">◆</span>
+          <span class="brand-text">Your Agency</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a class="nav-link" href="#hero">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#portfolio">Projects</a></li>
+          <li><a class="nav-link" href="#case-studies">Case Studies</a></li>
+          <li><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li><a class="nav-link" href="#blog">Insights</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1Zm0 15a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM4 11a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1Zm13 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1ZM6.22 5.64a1 1 0 0 1 1.41 0l.71.7a1 1 0 0 1-1.41 1.42l-.71-.71a1 1 0 0 1 0-1.41Zm8.45 8.45a1 1 0 0 1 1.41 0l.71.71a1 1 0 1 1-1.41 1.41l-.71-.7a1 1 0 0 1 0-1.42ZM3 12a9 9 0 1 0 9-9 6.5 6.5 0 0 0 0 13A9 9 0 0 1 3 12Z"/></svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="section hero-section reveal" aria-label="Hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 class="headline">We build polished, performant front‑end experiences</h1>
+            <p class="subheadline">Trusted by startups and small businesses to design, develop, and deliver premium websites that convert.</p>
+            <div class="cta-group">
+              <a href="#contact" class="btn btn-primary cta">Let’s Work Together</a>
+              <a href="#portfolio" class="btn btn-ghost">View Projects</a>
+            </div>
+            <ul class="trust-points">
+              <li><span class="check">✓</span> Accessibility-first</li>
+              <li><span class="check">✓</span> Lightning-fast</li>
+              <li><span class="check">✓</span> Pixel-perfect</li>
+            </ul>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <!-- Placeholder animated vector; replace with a licensed Freepik/Storyset embed -->
+            <div class="animated-illustration" data-freepik-source="https://storyset.com/web"></div>
+            <p class="attribution">Illustration: Storyset by Freepik</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section reveal" aria-label="About">
+        <div class="container">
+          <header class="section-header">
+            <h2>About Our Studio</h2>
+            <p>We are a front-end development agency focused on clarity, speed, and craft. We translate business goals into elegant, maintainable interfaces.</p>
+          </header>
+          <div class="about-grid">
+            <div class="about-card">
+              <div class="icon-circle">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12H4z"/><path d="M4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/></svg>
+              </div>
+              <h3>Our Story</h3>
+              <p>Born remote. Built on principles. We partner closely with clients to ship reliably and iterate fast.</p>
+            </div>
+            <div class="about-card">
+              <div class="icon-circle">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5Zm0 20-8-4V9l8 4 8-4v9l-8 4Z"/></svg>
+              </div>
+              <h3>Core Skills</h3>
+              <ul class="pill-list">
+                <li>React / Next.js</li>
+                <li>TypeScript</li>
+                <li>Design Systems</li>
+                <li>Animations</li>
+                <li>A11y</li>
+                <li>Performance</li>
+              </ul>
+            </div>
+            <div class="about-card">
+              <div class="icon-circle">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+              </div>
+              <h3>Values</h3>
+              <p>Transparent communication, thoughtful details, and dependable delivery on every engagement.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="section reveal" aria-label="Services">
+        <div class="container">
+          <header class="section-header">
+            <h2>Services</h2>
+            <p>Tailored solutions for high-impact web products.</p>
+          </header>
+          <div class="card-grid services-grid">
+            <article class="service-card">
+              <div class="service-icon">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M3 4h18v4H3zM3 10h18v10H3z"/></svg>
+              </div>
+              <h3>Web App Front‑Ends</h3>
+              <p>Robust SPAs with clean architecture and type‑safe APIs.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 9h8v2H8zM8 13h8v2H8z"/></svg>
+              </div>
+              <h3>UI/UX Implementation</h3>
+              <p>Design‑system driven builds that scale with your product.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9z"/></svg>
+              </div>
+              <h3>Landing Pages</h3>
+              <p>Conversion‑focused pages with analytics and SEO baked in.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg>
+              </div>
+              <h3>Performance & A11y</h3>
+              <p>Audits and remediations to meet Core Web Vitals and WCAG.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+              </div>
+              <h3>Design Systems</h3>
+              <p>Reusable component libraries with documentation.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M3 18h18v2H3zM6 6h12v8H6z"/></svg>
+              </div>
+              <h3>Site Migrations</h3>
+              <p>Seamless moves to modern stacks without downtime.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="section reveal" aria-label="Projects">
+        <div class="container">
+          <header class="section-header">
+            <h2>Selected Projects</h2>
+            <p>Work that balances aesthetics and engineering rigor.</p>
+          </header>
+          <div class="filter-bar" role="tablist" aria-label="Project categories">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter-btn" data-filter="web" role="tab">Web Design</button>
+            <button class="filter-btn" data-filter="uiux" role="tab">UI/UX</button>
+            <button class="filter-btn" data-filter="landing" role="tab">Landing Pages</button>
+          </div>
+          <div class="grid portfolio-grid" id="projectGrid">
+            <figure class="project-card" data-category="web" data-title="E‑Commerce UI" data-description="Responsive storefront with cart, filters, and animations." data-tags="React,TypeScript,UI Animations" data-link="#">
+              <img class="project-thumb" alt="E‑Commerce UI mock" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='420'><rect width='100%' height='100%' fill='%23f4f6ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins' font-size='24' fill='%23603fff'>Project Thumbnail</text></svg>" loading="lazy" />
+              <figcaption>E‑Commerce UI</figcaption>
+            </figure>
+            <figure class="project-card" data-category="uiux" data-title="SaaS Dashboard" data-description="Data‑dense dashboard with theming and internationalization." data-tags="Next.js,Design System,Charts" data-link="#">
+              <img class="project-thumb" alt="SaaS Dashboard mock" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='420'><rect width='100%' height='100%' fill='%23f4f6ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins' font-size='24' fill='%23603fff'>Project Thumbnail</text></svg>" loading="lazy" />
+              <figcaption>SaaS Dashboard</figcaption>
+            </figure>
+            <figure class="project-card" data-category="landing" data-title="Fintech Landing" data-description="Premium landing with A/B tested hero and pricing table." data-tags="Landing,SEO,Analytics" data-link="#">
+              <img class="project-thumb" alt="Fintech Landing mock" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='420'><rect width='100%' height='100%' fill='%23f4f6ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins' font-size='24' fill='%23603fff'>Project Thumbnail</text></svg>" loading="lazy" />
+              <figcaption>Fintech Landing</figcaption>
+            </figure>
+            <figure class="project-card" data-category="web" data-title="Non‑Profit Site" data-description="Accessible site with multilingual support and donations." data-tags="A11y,Static,Stripe" data-link="#">
+              <img class="project-thumb" alt="Non‑Profit Site mock" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='420'><rect width='100%' height='100%' fill='%23f4f6ff'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins' font-size='24' fill='%23603fff'>Project Thumbnail</text></svg>" loading="lazy" />
+              <figcaption>Non‑Profit Site</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Project Modal -->
+        <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+          <div class="modal-backdrop" data-close></div>
+          <div class="modal-content" role="document">
+            <button class="modal-close" aria-label="Close" data-close>&times;</button>
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc" class="modal-desc"></p>
+            <p id="modalTags" class="modal-tags"></p>
+            <a id="modalLink" class="btn btn-primary" href="#" target="_blank" rel="noopener">View Project</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Studies -->
+      <section id="case-studies" class="section reveal" aria-label="Case Studies">
+        <div class="container">
+          <header class="section-header">
+            <h2>Case Studies</h2>
+            <p>Deeper dives into selected collaborations and outcomes.</p>
+          </header>
+          <div class="carousel" aria-roledescription="carousel">
+            <button class="carousel-btn prev" aria-label="Previous case">&#10094;</button>
+            <div class="carousel-track" id="caseTrack">
+              <article class="case-card">
+                <h3>Optimizing Time‑to‑Interactive</h3>
+                <p>Reduced TTI by 48% via code‑split routes, image CDNs, and prefetching.</p>
+              </article>
+              <article class="case-card">
+                <h3>Accessible Design System</h3>
+                <p>WCAG‑compliant components that accelerated delivery across teams.</p>
+              </article>
+              <article class="case-card">
+                <h3>Replatform to Next.js</h3>
+                <p>SEO gains with SSG and ISR, automated with CI and preview deploys.</p>
+              </article>
+            </div>
+            <button class="carousel-btn next" aria-label="Next case">&#10095;</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="section reveal" aria-label="Testimonials">
+        <div class="container">
+          <header class="section-header">
+            <h2>What Clients Say</h2>
+            <p>We care deeply about the craft and your outcomes.</p>
+          </header>
+          <div class="slider" aria-roledescription="carousel">
+            <button class="slider-btn prev" aria-label="Previous testimonial">&#10094;</button>
+            <div class="slider-track" id="testiTrack">
+              <figure class="testimonial">
+                <div class="avatar" aria-hidden="true">
+                  <svg viewBox="0 0 80 80"><circle cx="40" cy="28" r="16" fill="#603fff"/><rect x="20" y="48" width="40" height="24" rx="12" fill="#cfd3ff"/></svg>
+                </div>
+                <blockquote>“A meticulous partner. Our launch was smooth and metrics improved immediately.”</blockquote>
+                <figcaption>— Taylor R., Product Lead</figcaption>
+              </figure>
+              <figure class="testimonial">
+                <div class="avatar" aria-hidden="true">
+                  <svg viewBox="0 0 80 80"><circle cx="40" cy="28" r="16" fill="#603fff"/><rect x="20" y="48" width="40" height="24" rx="12" fill="#cfd3ff"/></svg>
+                </div>
+                <blockquote>“Excellent eye for detail with strong communication. Highly recommended.”</blockquote>
+                <figcaption>— Jordan M., Founder</figcaption>
+              </figure>
+              <figure class="testimonial">
+                <div class="avatar" aria-hidden="true">
+                  <svg viewBox="0 0 80 80"><circle cx="40" cy="28" r="16" fill="#603fff"/><rect x="20" y="48" width="40" height="24" rx="12" fill="#cfd3ff"/></svg>
+                </div>
+                <blockquote>“They lifted our frontend quality bar and shipped faster than our timeline.”</blockquote>
+                <figcaption>— Casey W., CTO</figcaption>
+              </figure>
+            </div>
+            <button class="slider-btn next" aria-label="Next testimonial">&#10095;</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog / Insights -->
+      <section id="blog" class="section reveal" aria-label="Insights">
+        <div class="container">
+          <header class="section-header">
+            <h2>Insights</h2>
+            <p>Perspectives on performance, accessibility, and modern UI engineering.</p>
+          </header>
+          <div class="card-grid blog-grid">
+            <article class="post-card">
+              <div class="post-thumb"></div>
+              <h3>Design Tokens: The Single Source of Truth</h3>
+              <p>How tokens unify brand, speed up delivery, and reduce UI drift.</p>
+              <a class="post-link" href="#">Read article</a>
+            </article>
+            <article class="post-card">
+              <div class="post-thumb"></div>
+              <h3>Core Web Vitals in Practice</h3>
+              <p>Measuring, prioritizing, and fixing what actually matters.</p>
+              <a class="post-link" href="#">Read article</a>
+            </article>
+            <article class="post-card">
+              <div class="post-thumb"></div>
+              <h3>Accessibility That Scales</h3>
+              <p>Pragmatic patterns to keep teams shipping inclusive UIs.</p>
+              <a class="post-link" href="#">Read article</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section reveal" aria-label="Contact">
+        <div class="container">
+          <header class="section-header">
+            <h2>Let’s build something great</h2>
+            <p>Tell us about your goals. We typically reply within one business day.</p>
+          </header>
+          <div class="contact-grid">
+            <form id="contactForm" novalidate>
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+                <span class="error" id="error-name" role="alert"></span>
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+                <span class="error" id="error-email" role="alert"></span>
+              </div>
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <span class="error" id="error-message" role="alert"></span>
+              </div>
+              <button class="btn btn-primary" type="submit" id="submitBtn" disabled>Send Message</button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+            <div class="map-illus" aria-hidden="true">
+              <svg viewBox="0 0 320 220" class="map-svg" role="img" aria-label="Map illustration">
+                <defs>
+                  <linearGradient id="g" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#e9ecff" /><stop offset="100%" stop-color="#cfd3ff" />
+                  </linearGradient>
+                </defs>
+                <rect width="100%" height="100%" rx="16" fill="url(#g)"/>
+                <circle cx="80" cy="80" r="6" fill="#603fff"/>
+                <circle cx="200" cy="50" r="6" fill="#603fff"/>
+                <circle cx="260" cy="160" r="6" fill="#603fff"/>
+                <path d="M80 80C120 70 200 50 260 160" stroke="#603fff" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <a class="brand" href="#top" aria-label="Back to top">
+            <span class="brand-mark" aria-hidden="true">◆</span>
+            <span class="brand-text">Your Agency</span>
+          </a>
+          <ul class="footer-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#blog">Insights</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <ul class="social-links">
+            <li><a href="#" aria-label="Twitter" class="social"><svg viewBox="0 0 24 24"><path d="M22 5.8c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.2 1.7-2.1-.8.5-1.7.9-2.6 1.1C17.9 4.6 16.8 4 15.6 4c-2.3 0-4.1 2-3.5 4.3-3.3-.2-6.3-1.8-8.2-4.2-1 1.7-.5 3.9 1.2 5-.6 0-1.2-.2-1.7-.5 0 2 1.4 3.7 3.4 4.1-.6.2-1.2.2-1.7.1.5 1.7 2.1 3 4 3-1.7 1.3-3.9 2-6.1 1.7 1.8 1.2 3.9 1.8 6.1 1.8 7.3 0 11.5-6.2 11.2-11.8.8-.6 1.5-1.3 2-2.1z"/></svg></a></li>
+            <li><a href="#" aria-label="LinkedIn" class="social"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-1 1.9-2.2 3.9-2.2 4.2 0 4.9 2.8 4.9 6.5V24h-4v-7c0-1.7 0-4-2.4-4s-2.8 1.8-2.8 3.9V24h-4V8z"/></svg></a></li>
+            <li><a href="#" aria-label="GitHub" class="social"><svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.8 5.4.8 11.7c0 4.9 3.2 9 7.6 10.5.6.1.8-.3.8-.6v-2.2c-3.1.7-3.8-1.5-3.8-1.5-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.6 2.1 2.9 1.5.1-.8.4-1.4.7-1.7-2.5-.3-5.2-1.2-5.2-5.7 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.6.1-3.4 0 0 1-.3 3.4 1.3a11.6 11.6 0 0 1 6.2 0C20 3.8 21 4 21 4c.6 1.8.2 3.1.1 3.4.8.9 1.2 2 1.2 3.3 0 4.5-2.7 5.4-5.2 5.7.4.3.7 1 .7 2.1v3.1c0 .3.2.7.8.6 4.4-1.5 7.6-5.6 7.6-10.5C23.2 5.4 18.3.5 12 .5z"/></svg></a></li>
+          </ul>
+        </div>
+        <div class="container legal">
+          <p>© <span id="year"></span> Your Agency. All rights reserved.</p>
+          <p class="small">Illustrations by Storyset (Freepik). Replace with your licensed assets as needed.</p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="./scripts.js" defer></script>
+  </body>
+</html>
