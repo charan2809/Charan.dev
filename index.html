@@ -1,1257 +1,326 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebCraft Agency - Premium Front-End Development</title>
-    
-    <!-- Google Fonts - Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <!--
+    Sudharshan Interior Designs — Single Page Website (index.html)
+    - Technology: Pure HTML5 + CSS3 + Vanilla JS (see /css/styles.css and /js/app.js)
+    - Brand Green: WhatsApp Green #25D366 (change via CSS variables in styles.css: --brand-hue/--brand-rgb)
+    - Alternate Green: Shopify Green #95BF47 (update --brand-rgb to 149,191,71 and --brand to #95BF47)
+    - Notes: Semantic HTML, accessible ARIA, Lighthouse-friendly. See JSON-LD for Organization and Service schema.
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sudharshan Interior Designs — Crafting Ultra-Modern Spaces</title>
+  <meta name="description" content="Ultra-modern interiors: cupboards, modular kitchens, main doors, windows, and aluminum works. Premium quality, precise timelines, customized designs.">
+  <meta name="theme-color" content="#25D366">
+  <link rel="canonical" href="https://sudharshaninteriors.example.com/">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Sudharshan Interior Designs — Crafting Ultra-Modern Spaces">
+  <meta property="og:description" content="Cupboards, Kitchens, Main Doors, Windows & Aluminum Works—crafted to premium standards.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sudharshaninteriors.example.com/">
+  <meta property="og:image" content="/images/hero.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sudharshan Interior Designs">
+  <meta name="twitter:description" content="Crafting Ultra-Modern Spaces.">
+  <meta name="twitter:image" content="/images/hero.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="preload" as="style" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/inter/v12/UcCo3Fwr0n-yfS7i.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2" type="font/woff2" crossorigin>
+
+  <!-- PWA & Icons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+
+  <!-- Schema.org: Organization + Services -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sudharshan Interior Designs",
+    "url": "https://sudharshaninteriors.example.com/",
+    "logo": "https://sudharshaninteriors.example.com/favicon.svg",
+    "sameAs": [
+      "https://www.instagram.com/",
+      "https://www.facebook.com/",
+      "https://wa.me/919999999999"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-99999-99999",
+      "contactType": "customer service",
+      "areaServed": "IN",
+      "availableLanguage": ["English"]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Design Avenue",
+      "addressLocality": "Chennai",
+      "addressRegion": "TN",
+      "postalCode": "600001",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Interior Design",
+    "provider": {
+      "@type": "Organization",
+      "name": "Sudharshan Interior Designs"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Core Services",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Modern Interior Cupboards","description":"Premium materials, precise joinery, custom finishes."}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Modular Kitchens","description":"Ergonomic layouts, durable hardware, refined surfaces."}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Main Doors","description":"Statement entry doors with robust construction."}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Windows","description":"High-clarity glazing, clean frames, seamless fit."}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Aluminum Works","description":"Lightweight, strong, modern profiles for interiors."}}
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">WebCraft</span>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#hero" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#portfolio" class="nav-link">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#case-studies" class="nav-link">Case Studies</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testimonials" class="nav-link">Testimonials</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#blog" class="nav-link">Insights</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="nav-controls">
-                <button class="theme-toggle" id="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <div class="hamburger" id="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </div>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title animate-fade-up">
-                    Crafting Digital Experiences That <span class="text-primary">Convert</span>
-                </h1>
-                <p class="hero-subtitle animate-fade-up delay-1">
-                    We're a premium front-end development agency specializing in creating stunning, 
-                    high-performance websites that drive results for your business.
-                </p>
-                <button class="cta-button animate-fade-up delay-2">
-                    <span>Let's Work Together</span>
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-            </div>
-            <div class="hero-illustration">
-                <div class="illustration-container animate-fade-up delay-3">
-                    <!-- Animated SVG illustration will be added here -->
-                    <svg viewBox="0 0 500 400" class="hero-svg">
-                        <defs>
-                            <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#603fff;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <!-- Developer workspace illustration -->
-                        <rect x="50" y="80" width="400" height="280" rx="20" fill="var(--card-bg)" stroke="var(--border-color)" stroke-width="2"/>
-                        <rect x="70" y="100" width="360" height="20" rx="10" fill="var(--border-color)"/>
-                        <circle cx="90" cy="110" r="5" fill="#ff5f56"/>
-                        <circle cx="110" cy="110" r="5" fill="#ffbd2e"/>
-                        <circle cx="130" cy="110" r="5" fill="#27ca3f"/>
-                        <rect x="70" y="140" width="120" height="80" rx="8" fill="url(#primaryGradient)" opacity="0.8"/>
-                        <rect x="210" y="140" width="100" height="15" rx="7" fill="var(--text-secondary)" opacity="0.6"/>
-                        <rect x="210" y="170" width="140" height="15" rx="7" fill="var(--text-secondary)" opacity="0.4"/>
-                        <rect x="210" y="200" width="80" height="15" rx="7" fill="var(--text-secondary)" opacity="0.3"/>
-                        <rect x="70" y="240" width="260" height="100" rx="8" fill="var(--bg-secondary)" stroke="var(--border-color)"/>
-                        <circle cx="380" cy="180" r="30" fill="url(#primaryGradient)" opacity="0.2"/>
-                        <circle cx="380" cy="180" r="20" fill="url(#primaryGradient)" opacity="0.4"/>
-                        <circle cx="380" cy="180" r="10" fill="url(#primaryGradient)"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About WebCraft Agency</h2>
-                <p class="section-subtitle">
-                    We transform ideas into exceptional digital experiences
-                </p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Our Story</h3>
-                    <p>
-                        Founded with a passion for creating outstanding digital experiences, WebCraft Agency 
-                        has been at the forefront of front-end development for over 5 years. We believe that 
-                        great design and flawless functionality should go hand in hand to create websites that 
-                        not only look stunning but also drive real business results.
-                    </p>
-                    
-                    <h3>Our Values</h3>
-                    <div class="values-grid">
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <h4>Quality Code</h4>
-                            <p>Clean, maintainable, and scalable code that stands the test of time.</p>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h4>Client Focus</h4>
-                            <p>Your success is our success. We prioritize your goals and objectives.</p>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <h4>Innovation</h4>
-                            <p>Staying ahead of trends and technologies to deliver cutting-edge solutions.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills-container">
-                    <h3>Our Expertise</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <span class="skill-name">React & Next.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Vue.js & Nuxt.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">TypeScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="92"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">UI/UX Design</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="88"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Performance Optimization</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="93"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">
-                    Comprehensive front-end solutions tailored to your business needs
-                </p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Custom Web Development</h3>
-                    <p>
-                        Bespoke websites built from the ground up using modern frameworks and technologies 
-                        to deliver exceptional user experiences and optimal performance.
-                    </p>
-                    <ul class="service-features">
-                        <li>React/Vue.js Applications</li>
-                        <li>Progressive Web Apps</li>
-                        <li>Single Page Applications</li>
-                        <li>API Integration</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>UI/UX Design & Development</h3>
-                    <p>
-                        Transform your ideas into stunning, user-friendly interfaces that engage visitors 
-                        and drive conversions through thoughtful design and seamless functionality.
-                    </p>
-                    <ul class="service-features">
-                        <li>User Interface Design</li>
-                        <li>User Experience Optimization</li>
-                        <li>Prototyping & Wireframing</li>
-                        <li>Design System Creation</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Responsive Web Design</h3>
-                    <p>
-                        Ensure your website looks and performs flawlessly across all devices with our 
-                        mobile-first approach to responsive design and development.
-                    </p>
-                    <ul class="service-features">
-                        <li>Mobile-First Design</li>
-                        <li>Cross-Browser Compatibility</li>
-                        <li>Touch-Friendly Interfaces</li>
-                        <li>Performance Optimization</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3>E-commerce Solutions</h3>
-                    <p>
-                        Build powerful online stores that convert visitors into customers with secure, 
-                        fast, and user-friendly e-commerce platforms tailored to your business.
-                    </p>
-                    <ul class="service-features">
-                        <li>Custom Shopping Cart</li>
-                        <li>Payment Gateway Integration</li>
-                        <li>Inventory Management</li>
-                        <li>Order Processing</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <h3>Performance Optimization</h3>
-                    <p>
-                        Maximize your website's speed and performance with advanced optimization techniques 
-                        that improve user experience and search engine rankings.
-                    </p>
-                    <ul class="service-features">
-                        <li>Core Web Vitals Optimization</li>
-                        <li>Image & Asset Optimization</li>
-                        <li>Code Splitting & Lazy Loading</li>
-                        <li>SEO Performance</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Maintenance & Support</h3>
-                    <p>
-                        Keep your website running smoothly with our comprehensive maintenance and support 
-                        services, ensuring security, updates, and continuous optimization.
-                    </p>
-                    <ul class="service-features">
-                        <li>Regular Updates & Patches</li>
-                        <li>Security Monitoring</li>
-                        <li>Bug Fixes & Improvements</li>
-                        <li>Technical Support</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Portfolio</h2>
-                <p class="section-subtitle">
-                    Showcasing our best work and successful client partnerships
-                </p>
-            </div>
-            
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web-design">Web Design</button>
-                <button class="filter-btn" data-filter="ui-ux">UI/UX</button>
-                <button class="filter-btn" data-filter="landing-pages">Landing Pages</button>
-                <button class="filter-btn" data-filter="e-commerce">E-commerce</button>
-            </div>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="web-design">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-laptop-code"></i>
-                            <span>TechCorp Website</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn" onclick="openPortfolioModal('project1')">
-                                View Details
-                            </button>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>TechCorp Corporate Website</h3>
-                        <p>Modern corporate website with advanced animations</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Next.js</span>
-                            <span class="tag">GSAP</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="ui-ux">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>FinanceApp UI</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn" onclick="openPortfolioModal('project2')">
-                                View Details
-                            </button>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>FinanceApp Dashboard</h3>
-                        <p>Intuitive financial dashboard with data visualization</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">D3.js</span>
-                            <span class="tag">UI/UX</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="landing-pages">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-rocket"></i>
-                            <span>StartupLand</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn" onclick="openPortfolioModal('project3')">
-                                View Details
-                            </button>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Startup Landing Page</h3>
-                        <p>High-converting landing page for SaaS startup</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="e-commerce">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-shopping-bag"></i>
-                            <span>FashionStore</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn" onclick="openPortfolioModal('project4')">
-                                View Details
-                            </button>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Fashion E-commerce Platform</h3>
-                        <p>Complete e-commerce solution with custom features</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Stripe</span>
-                            <span class="tag">Node.js</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="web-design">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-utensils"></i>
-                            <span>Restaurant</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn" onclick="openPortfolioModal('project5')">
-                                View Details
-                            </button>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Restaurant Chain Website</h3>
-                        <p>Multi-location restaurant website with online ordering</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">Nuxt.js</span>
-                            <span class="tag">PWA</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item" data-category="ui-ux">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>EduPlatform</span>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <button class="portfolio-btn" onclick="openPortfolioModal('project6')">
-                                View Details
-                            </button>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Educational Platform</h3>
-                        <p>Interactive learning platform with progress tracking</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">WebRTC</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section id="case-studies" class="case-studies">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Case Studies</h2>
-                <p class="section-subtitle">
-                    Deep dives into our most successful client partnerships
-                </p>
-            </div>
-            
-            <div class="case-studies-container">
-                <div class="case-study-card active">
-                    <div class="case-study-header">
-                        <div class="case-study-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="case-study-title">
-                            <h3>E-commerce Revenue Boost</h3>
-                            <span class="case-study-client">RetailMax Inc.</span>
-                        </div>
-                        <div class="case-study-result">
-                            <span class="result-number">+187%</span>
-                            <span class="result-label">Revenue Increase</span>
-                        </div>
-                    </div>
-                    <div class="case-study-content">
-                        <div class="case-study-summary">
-                            <p>
-                                RetailMax approached us with a outdated e-commerce platform that was losing customers 
-                                due to poor user experience and slow loading times. Our team redesigned their entire 
-                                shopping experience with a focus on conversion optimization.
-                            </p>
-                        </div>
-                        <div class="case-study-details">
-                            <div class="challenge">
-                                <h4>The Challenge</h4>
-                                <ul>
-                                    <li>High cart abandonment rate (78%)</li>
-                                    <li>Slow page load times (8+ seconds)</li>
-                                    <li>Poor mobile experience</li>
-                                    <li>Confusing checkout process</li>
-                                </ul>
-                            </div>
-                            <div class="solution">
-                                <h4>Our Solution</h4>
-                                <ul>
-                                    <li>Complete UX/UI redesign</li>
-                                    <li>Performance optimization</li>
-                                    <li>Mobile-first approach</li>
-                                    <li>Simplified checkout flow</li>
-                                    <li>A/B tested product pages</li>
-                                </ul>
-                            </div>
-                            <div class="results">
-                                <h4>Results</h4>
-                                <div class="results-grid">
-                                    <div class="result-item">
-                                        <span class="result-value">187%</span>
-                                        <span class="result-desc">Revenue Increase</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">65%</span>
-                                        <span class="result-desc">Lower Cart Abandonment</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">3.2s</span>
-                                        <span class="result-desc">Page Load Time</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">92%</span>
-                                        <span class="result-desc">Mobile Conversion Rate</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="case-study-card">
-                    <div class="case-study-header">
-                        <div class="case-study-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="case-study-title">
-                            <h3>User Engagement Transformation</h3>
-                            <span class="case-study-client">TechHub Platform</span>
-                        </div>
-                        <div class="case-study-result">
-                            <span class="result-number">+340%</span>
-                            <span class="result-label">User Engagement</span>
-                        </div>
-                    </div>
-                    <div class="case-study-content">
-                        <div class="case-study-summary">
-                            <p>
-                                TechHub needed to increase user engagement on their learning platform. Through 
-                                comprehensive UX research and iterative design improvements, we transformed 
-                                their user experience and significantly boosted engagement metrics.
-                            </p>
-                        </div>
-                        <div class="case-study-details">
-                            <div class="challenge">
-                                <h4>The Challenge</h4>
-                                <ul>
-                                    <li>Low user retention (23%)</li>
-                                    <li>Complex navigation system</li>
-                                    <li>Poor content discoverability</li>
-                                    <li>Lack of progress tracking</li>
-                                </ul>
-                            </div>
-                            <div class="solution">
-                                <h4>Our Solution</h4>
-                                <ul>
-                                    <li>User journey mapping</li>
-                                    <li>Simplified navigation</li>
-                                    <li>Personalized content feeds</li>
-                                    <li>Gamification elements</li>
-                                    <li>Progress visualization</li>
-                                </ul>
-                            </div>
-                            <div class="results">
-                                <h4>Results</h4>
-                                <div class="results-grid">
-                                    <div class="result-item">
-                                        <span class="result-value">340%</span>
-                                        <span class="result-desc">User Engagement</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">78%</span>
-                                        <span class="result-desc">User Retention</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">45%</span>
-                                        <span class="result-desc">Course Completion</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">12min</span>
-                                        <span class="result-desc">Avg. Session Time</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="case-study-card">
-                    <div class="case-study-header">
-                        <div class="case-study-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <div class="case-study-title">
-                            <h3>Startup Growth Acceleration</h3>
-                            <span class="case-study-client">InnovateLab</span>
-                        </div>
-                        <div class="case-study-result">
-                            <span class="result-number">+520%</span>
-                            <span class="result-label">Lead Generation</span>
-                        </div>
-                    </div>
-                    <div class="case-study-content">
-                        <div class="case-study-summary">
-                            <p>
-                                InnovateLab, a promising startup, needed a high-converting landing page to attract 
-                                investors and customers. Our conversion-focused design and development approach 
-                                delivered exceptional results that exceeded all expectations.
-                            </p>
-                        </div>
-                        <div class="case-study-details">
-                            <div class="challenge">
-                                <h4>The Challenge</h4>
-                                <ul>
-                                    <li>Low lead conversion (2.1%)</li>
-                                    <li>Unclear value proposition</li>
-                                    <li>Generic design approach</li>
-                                    <li>Poor funnel optimization</li>
-                                </ul>
-                            </div>
-                            <div class="solution">
-                                <h4>Our Solution</h4>
-                                <ul>
-                                    <li>Conversion-focused design</li>
-                                    <li>Clear value proposition</li>
-                                    <li>Social proof integration</li>
-                                    <li>Optimized lead capture</li>
-                                    <li>Multi-variant testing</li>
-                                </ul>
-                            </div>
-                            <div class="results">
-                                <h4>Results</h4>
-                                <div class="results-grid">
-                                    <div class="result-item">
-                                        <span class="result-value">520%</span>
-                                        <span class="result-desc">Lead Generation</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">13.2%</span>
-                                        <span class="result-desc">Conversion Rate</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">$2.3M</span>
-                                        <span class="result-desc">Funding Raised</span>
-                                    </div>
-                                    <div class="result-item">
-                                        <span class="result-value">150%</span>
-                                        <span class="result-desc">User Acquisition</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="case-studies-controls">
-                <button class="case-study-nav prev" onclick="navigateCaseStudy(-1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <div class="case-study-indicators">
-                    <span class="indicator active"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                </div>
-                <button class="case-study-nav next" onclick="navigateCaseStudy(1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What Our Clients Say</h2>
-                <p class="section-subtitle">
-                    Trusted by businesses worldwide for exceptional results
-                </p>
-            </div>
-            
-            <div class="testimonials-slider">
-                <div class="testimonial-track">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="testimonial-text">
-                                "WebCraft Agency exceeded our expectations in every way. Their attention to detail, 
-                                technical expertise, and commitment to our success made them the perfect partner for 
-                                our digital transformation. Our new website has increased our leads by 300%."
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 100 100" class="avatar-svg">
-                                        <circle cx="50" cy="50" r="50" fill="url(#primaryGradient)"/>
-                                        <circle cx="50" cy="35" r="15" fill="white"/>
-                                        <path d="M20 80 Q20 60 50 60 Q80 60 80 80 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <div class="author-info">
-                                    <h4>Sarah Johnson</h4>
-                                    <span>CEO, TechCorp Solutions</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="testimonial-text">
-                                "The team at WebCraft delivered a stunning e-commerce platform that perfectly captures 
-                                our brand essence. The user experience is flawless, and our conversion rates have 
-                                improved dramatically. Highly recommended for any serious business."
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 100 100" class="avatar-svg">
-                                        <circle cx="50" cy="50" r="50" fill="#34d399"/>
-                                        <circle cx="50" cy="35" r="15" fill="white"/>
-                                        <path d="M20 80 Q20 60 50 60 Q80 60 80 80 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <div class="author-info">
-                                    <h4>Michael Chen</h4>
-                                    <span>Founder, RetailMax Inc.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="testimonial-text">
-                                "Working with WebCraft was a game-changer for our startup. They understood our vision 
-                                and brought it to life with a website that not only looks amazing but also performs 
-                                exceptionally well. Our user engagement has increased by 400%."
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 100 100" class="avatar-svg">
-                                        <circle cx="50" cy="50" r="50" fill="#f59e0b"/>
-                                        <circle cx="50" cy="35" r="15" fill="white"/>
-                                        <path d="M20 80 Q20 60 50 60 Q80 60 80 80 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <div class="author-info">
-                                    <h4>Emily Rodriguez</h4>
-                                    <span>CTO, InnovateLab</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="testimonial-text">
-                                "The professionalism and expertise of the WebCraft team is unmatched. They delivered 
-                                a complex web application on time and within budget, while maintaining the highest 
-                                quality standards. Our customers love the new interface."
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 100 100" class="avatar-svg">
-                                        <circle cx="50" cy="50" r="50" fill="#ef4444"/>
-                                        <circle cx="50" cy="35" r="15" fill="white"/>
-                                        <path d="M20 80 Q20 60 50 60 Q80 60 80 80 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <div class="author-info">
-                                    <h4>David Thompson</h4>
-                                    <span>Director, TechHub Platform</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonials-controls">
-                <button class="testimonial-nav prev" onclick="navigateTestimonial(-1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <div class="testimonial-indicators">
-                    <span class="indicator active"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                </div>
-                <button class="testimonial-nav next" onclick="navigateTestimonial(1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog/Insights Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Latest Insights</h2>
-                <p class="section-subtitle">
-                    Stay updated with the latest trends and best practices in web development
-                </p>
-            </div>
-            
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-code"></i>
-                            <span>React 18 Features</span>
-                        </div>
-                        <div class="blog-category">Development</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                December 15, 2023
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                5 min read
-                            </span>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="#" onclick="openBlogPost('react-18-features')">
-                                Mastering React 18: New Features and Performance Improvements
-                            </a>
-                        </h3>
-                        <p class="blog-excerpt">
-                            Discover the latest features in React 18 including concurrent rendering, 
-                            automatic batching, and Suspense improvements that will revolutionize your development workflow.
-                        </p>
-                        <div class="blog-footer">
-                            <div class="blog-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 40 40" class="avatar-svg">
-                                        <circle cx="20" cy="20" r="20" fill="url(#primaryGradient)"/>
-                                        <circle cx="20" cy="14" r="6" fill="white"/>
-                                        <path d="M8 32 Q8 24 20 24 Q32 24 32 32 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <span class="author-name">Alex Johnson</span>
-                            </div>
-                            <a href="#" class="read-more" onclick="openBlogPost('react-18-features')">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-palette"></i>
-                            <span>UX Trends 2024</span>
-                        </div>
-                        <div class="blog-category">Design</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                December 10, 2023
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                7 min read
-                            </span>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="#" onclick="openBlogPost('ux-trends-2024')">
-                                UX Design Trends 2024: What's Next for User Experience
-                            </a>
-                        </h3>
-                        <p class="blog-excerpt">
-                            Explore the emerging UX design trends that will shape user experiences in 2024, 
-                            from AI-powered interfaces to immersive micro-interactions and accessibility-first design.
-                        </p>
-                        <div class="blog-footer">
-                            <div class="blog-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 40 40" class="avatar-svg">
-                                        <circle cx="20" cy="20" r="20" fill="#34d399"/>
-                                        <circle cx="20" cy="14" r="6" fill="white"/>
-                                        <path d="M8 32 Q8 24 20 24 Q32 24 32 32 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <span class="author-name">Sarah Williams</span>
-                            </div>
-                            <a href="#" class="read-more" onclick="openBlogPost('ux-trends-2024')">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <span>Web Performance</span>
-                        </div>
-                        <div class="blog-category">Performance</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                December 5, 2023
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                6 min read
-                            </span>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="#" onclick="openBlogPost('web-performance-optimization')">
-                                Advanced Web Performance Optimization Techniques for 2024
-                            </a>
-                        </h3>
-                        <p class="blog-excerpt">
-                            Learn cutting-edge performance optimization strategies including Core Web Vitals improvements, 
-                            advanced caching techniques, and modern loading patterns for lightning-fast websites.
-                        </p>
-                        <div class="blog-footer">
-                            <div class="blog-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 40 40" class="avatar-svg">
-                                        <circle cx="20" cy="20" r="20" fill="#f59e0b"/>
-                                        <circle cx="20" cy="14" r="6" fill="white"/>
-                                        <path d="M8 32 Q8 24 20 24 Q32 24 32 32 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <span class="author-name">Mike Chen</span>
-                            </div>
-                            <a href="#" class="read-more" onclick="openBlogPost('web-performance-optimization')">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="placeholder-image">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Web Security</span>
-                        </div>
-                        <div class="blog-category">Security</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                November 28, 2023
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                8 min read
-                            </span>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="#" onclick="openBlogPost('frontend-security-best-practices')">
-                                Frontend Security Best Practices: Protecting Your Web Applications
-                            </a>
-                        </h3>
-                        <p class="blog-excerpt">
-                            Comprehensive guide to securing your frontend applications against modern threats including 
-                            XSS attacks, CSRF vulnerabilities, and implementing Content Security Policy effectively.
-                        </p>
-                        <div class="blog-footer">
-                            <div class="blog-author">
-                                <div class="author-avatar">
-                                    <svg viewBox="0 0 40 40" class="avatar-svg">
-                                        <circle cx="20" cy="20" r="20" fill="#ef4444"/>
-                                        <circle cx="20" cy="14" r="6" fill="white"/>
-                                        <path d="M8 32 Q8 24 20 24 Q32 24 32 32 Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <span class="author-name">Lisa Rodriguez</span>
-                            </div>
-                            <a href="#" class="read-more" onclick="openBlogPost('frontend-security-best-practices')">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Let's Start Your Project</h2>
-                <p class="section-subtitle">
-                    Ready to transform your digital presence? Get in touch with our team today.
-                </p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email Us</h4>
-                            <p>hello@webcraftagency.com</p>
-                            <p>info@webcraftagency.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Call Us</h4>
-                            <p>+1 (555) 123-4567</p>
-                            <p>+1 (555) 987-6543</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Visit Us</h4>
-                            <p>123 Innovation Street</p>
-                            <p>San Francisco, CA 94105</p>
-                        </div>
-                    </div>
-                    
-                    <div class="location-illustration">
-                        <svg viewBox="0 0 300 200" class="location-svg">
-                            <defs>
-                                <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#603fff;stop-opacity:0.1" />
-                                    <stop offset="100%" style="stop-color:#603fff;stop-opacity:0.3" />
-                                </linearGradient>
-                            </defs>
-                            <!-- Map background -->
-                            <rect width="300" height="200" fill="url(#mapGradient)" rx="15"/>
-                            <!-- Buildings -->
-                            <rect x="50" y="120" width="30" height="60" fill="var(--text-secondary)" opacity="0.3"/>
-                            <rect x="90" y="100" width="25" height="80" fill="var(--text-secondary)" opacity="0.4"/>
-                            <rect x="125" y="110" width="35" height="70" fill="var(--text-secondary)" opacity="0.3"/>
-                            <rect x="170" y="90" width="28" height="90" fill="var(--text-secondary)" opacity="0.4"/>
-                            <rect x="210" y="105" width="32" height="75" fill="var(--text-secondary)" opacity="0.3"/>
-                            <!-- Location pin -->
-                            <circle cx="150" cy="100" r="20" fill="url(#primaryGradient)" opacity="0.8"/>
-                            <circle cx="150" cy="100" r="8" fill="white"/>
-                            <!-- Streets -->
-                            <line x1="0" y1="180" x2="300" y2="180" stroke="var(--border-color)" stroke-width="2"/>
-                            <line x1="150" y1="0" x2="150" y2="200" stroke="var(--border-color)" stroke-width="1" opacity="0.5"/>
-                        </svg>
-                    </div>
-                </div>
-                
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                        <span class="error-message" id="name-error"></span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                        <span class="error-message" id="email-error"></span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="company">Company (Optional)</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="budget">Project Budget</label>
-                        <select id="budget" name="budget" required>
-                            <option value="">Select your budget range</option>
-                            <option value="5k-10k">$5,000 - $10,000</option>
-                            <option value="10k-25k">$10,000 - $25,000</option>
-                            <option value="25k-50k">$25,000 - $50,000</option>
-                            <option value="50k+">$50,000+</option>
-                        </select>
-                        <span class="error-message" id="budget-error"></span>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Project Details</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
-                        <span class="error-message" id="message-error"></span>
-                    </div>
-                    
-                    <button type="submit" class="submit-button">
-                        <span class="button-text">Send Message</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <span class="logo-text">WebCraft</span>
-                    </div>
-                    <p class="footer-description">
-                        Crafting exceptional digital experiences that drive results. 
-                        Your trusted partner for premium front-end development solutions.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-dribbble"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-behance"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services">Web Development</a></li>
-                        <li><a href="#services">UI/UX Design</a></li>
-                        <li><a href="#services">E-commerce Solutions</a></li>
-                        <li><a href="#services">Performance Optimization</a></li>
-                        <li><a href="#services">Maintenance & Support</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#case-studies">Case Studies</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                        <li><a href="#">Sitemap</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="footer-divider"></div>
-                <div class="footer-bottom-content">
-                    <p class="copyright">
-                        © 2023 WebCraft Agency. All rights reserved. Crafted with ❤️ for exceptional digital experiences.
-                    </p>
-                    <div class="footer-bottom-links">
-                        <a href="#">Privacy</a>
-                        <a href="#">Terms</a>
-                        <a href="#">Cookies</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Portfolio Modal -->
-    <div id="portfolio-modal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closePortfolioModal()">&times;</span>
-            <div id="modal-body">
-                <!-- Dynamic content will be inserted here -->
-            </div>
-        </div>
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Sudharshan Interior Designs home">
+        <img src="/icons/logo.svg" alt="Sudharshan logo" width="32" height="32" loading="eager" decoding="async">
+        <span class="brand-name">Sudharshan Interior Designs</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a class="nav-link" href="#home" data-scroll>Home</a></li>
+          <li><a class="nav-link" href="#about" data-scroll>About</a></li>
+          <li><a class="nav-link" href="#services" data-scroll>Services</a></li>
+          <li><a class="nav-link" href="#portfolio" data-scroll>Portfolio</a></li>
+          <li><a class="nav-link" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+  <main id="main" tabindex="-1">
+    <!-- Hero -->
+    <section id="home" class="section hero" aria-label="Hero">
+      <div class="hero-media" aria-hidden="true">
+        <img src="/images/hero.svg" alt="Ultra-modern interior hero" width="1920" height="1080">
+      </div>
+      <div class="container hero-content" data-reveal>
+        <h1 class="hero-title">Ultra-Modern Interiors, Tailored to You.</h1>
+        <p class="hero-sub">Cupboards, Kitchens, Main Doors, Windows &amp; Aluminum Works—crafted to premium standards.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#services" data-scroll>Explore Services</a>
+          <a class="btn btn-secondary" href="/contact.html">Get a Quote</a>
+        </div>
+      </div>
+      <div class="hero-gradient" aria-hidden="true"></div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section-about" aria-labelledby="about-title" data-surface="light">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="about-title" class="section-title">About Us</h2>
+          <svg class="title-underline" width="160" height="16" viewBox="0 0 160 16" aria-hidden="true">
+            <path d="M2 8 H158" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy" data-reveal>
+            <p>With decades of craft and a passion for details, Sudharshan Interior Designs transforms homes into refined, functional spaces. We collaborate closely to bring clarity, comfort, and sophistication to every room.</p>
+            <ul class="why-list">
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4L19 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Quality</li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4L19 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Timelines</li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4L19 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Customization</li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4L19 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> After-Support</li>
+            </ul>
+          </div>
+          <div class="about-stats" data-reveal>
+            <div class="stat-card hairline">
+              <div class="stat-value">20+<span>yrs</span></div>
+              <div class="stat-label">Experience</div>
+            </div>
+            <div class="stat-card hairline">
+              <div class="stat-value">800+</div>
+              <div class="stat-label">Projects Delivered</div>
+            </div>
+            <div class="stat-card hairline">
+              <div class="stat-value">98%<span>+</span></div>
+              <div class="stat-label">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section section-services" aria-labelledby="services-title" data-surface="dark">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="services-title" class="section-title">Services</h2>
+          <svg class="title-underline" width="160" height="16" viewBox="0 0 160 16" aria-hidden="true">
+            <path d="M2 8 H158" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="services-grid">
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="service-title">Modern Interior Cupboards</h3>
+            <p class="service-desc">Premium materials and precise joinery deliver long-lasting, elegant storage.</p>
+            <button class="micro-cta" data-lightbox="cupboards" aria-haspopup="dialog" aria-controls="lightbox">View Work</button>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 7v-2h8v2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="service-title">Modular Kitchens</h3>
+            <p class="service-desc">Ergonomic layouts and durable hardware for refined daily use.</p>
+            <button class="micro-cta" data-lightbox="kitchens" aria-haspopup="dialog" aria-controls="lightbox">View Work</button>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 9h12" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="service-title">Main Doors</h3>
+            <p class="service-desc">Statement entryways built with robust construction and finishes.</p>
+            <button class="micro-cta" data-lightbox="doors" aria-haspopup="dialog" aria-controls="lightbox">View Work</button>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4v16" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="service-title">Windows</h3>
+            <p class="service-desc">High clarity glazing with clean frames and seamless fit.</p>
+            <button class="micro-cta" data-lightbox="windows" aria-haspopup="dialog" aria-controls="lightbox">View Work</button>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M8 5v14M16 5v14" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="service-title">Aluminum Works</h3>
+            <p class="service-desc">Lightweight, strong, and modern profiles tailored to your space.</p>
+            <button class="micro-cta" data-lightbox="aluminum" aria-haspopup="dialog" aria-controls="lightbox">View Work</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Carousel -->
+    <section id="portfolio" class="section section-portfolio" aria-labelledby="portfolio-title" data-surface="light">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="portfolio-title" class="section-title">Portfolio</h2>
+          <svg class="title-underline" width="160" height="16" viewBox="0 0 160 16" aria-hidden="true">
+            <path d="M2 8 H158" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Project gallery">
+        <div class="carousel-viewport" tabindex="0">
+          <div class="carousel-track" data-carousel-track>
+            <figure class="carousel-slide" data-carousel-slide>
+              <img src="/images/portfolio-01.svg" alt="Modular Kitchen — Bangalore" width="1600" height="900" loading="lazy">
+              <figcaption class="carousel-caption">Modular Kitchen — Bangalore</figcaption>
+            </figure>
+            <figure class="carousel-slide" data-carousel-slide>
+              <img src="/images/portfolio-02.svg" alt="Main Door — Chennai" width="1600" height="900" loading="lazy">
+              <figcaption class="carousel-caption">Main Door — Chennai</figcaption>
+            </figure>
+            <figure class="carousel-slide" data-carousel-slide>
+              <img src="/images/portfolio-03.svg" alt="Windows — Hyderabad" width="1600" height="900" loading="lazy">
+              <figcaption class="carousel-caption">Windows — Hyderabad</figcaption>
+            </figure>
+          </div>
+        </div>
+        <button class="carousel-prev" aria-label="Previous slide">
+          <img src="/icons/arrow-left.svg" alt="" width="20" height="20" aria-hidden="true">
+        </button>
+        <button class="carousel-next" aria-label="Next slide">
+          <img src="/icons/arrow-right.svg" alt="" width="20" height="20" aria-hidden="true">
+        </button>
+        <div class="carousel-dots" role="tablist" aria-label="Slide Pagination"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" data-surface="dark">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <img src="/icons/logo.svg" alt="Sudharshan logo" width="32" height="32">
+          <span class="brand-name">Sudharshan Interior Designs</span>
+        </a>
+        <p>Premium interiors with uncompromising quality and precision.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Quick Links">
+        <ul>
+          <li><a href="#about" data-scroll>About</a></li>
+          <li><a href="#services" data-scroll>Services</a></li>
+          <li><a href="#portfolio" data-scroll>Portfolio</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-newsletter">
+        <form id="newsletter-form" novalidate>
+          <label for="newsletter-email">Newsletter</label>
+          <div class="input-row">
+            <input id="newsletter-email" name="email" type="email" required placeholder=" " aria-describedby="newsletter-help">
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </div>
+          <small id="newsletter-help">We respect your privacy. No spam.</small>
+          <p class="form-message" aria-live="polite"></p>
+        </form>
+        <ul class="social">
+          <li><a href="https://wa.me/919999999999" aria-label="WhatsApp"><img src="/icons/whatsapp.svg" width="20" height="20" alt=""></a></li>
+          <li><a href="https://www.instagram.com/" aria-label="Instagram"><img src="/icons/instagram.svg" width="20" height="20" alt=""></a></li>
+          <li><a href="https://www.facebook.com/" aria-label="Facebook"><img src="/icons/facebook.svg" width="20" height="20" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-meta">
+      <p>© <span id="year"></span> Sudharshan Interior Designs. All rights reserved.</p>
+      <a class="whatsapp-cta" href="https://wa.me/919999999999" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Service Galleries -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Service gallery">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-content" role="document">
+      <button class="lightbox-close" aria-label="Close" data-lightbox-close>&times;</button>
+      <div class="lightbox-viewport">
+        <button class="lightbox-prev" aria-label="Previous image"><img src="/icons/arrow-left.svg" width="20" height="20" alt=""></button>
+        <div class="lightbox-track"></div>
+        <button class="lightbox-next" aria-label="Next image"><img src="/icons/arrow-right.svg" width="20" height="20" alt=""></button>
+      </div>
+      <div class="lightbox-dots" role="tablist" aria-label="Image Pagination"></div>
+    </div>
+  </div>
+
+  <script defer src="/js/app.js"></script>
 </body>
 </html>

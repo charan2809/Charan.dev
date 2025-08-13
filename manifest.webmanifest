@@ -1,0 +1,11 @@
+{
+  "name": "Sudharshan Interior Designs",
+  "short_name": "Sudharshan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#25D366",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "64x64 128x128 256x256", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
