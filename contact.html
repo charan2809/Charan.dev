@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <!--
+    Sudharshan Interior Designs — Contact Page (contact.html)
+    - Technology: Pure HTML5 + CSS3 + Vanilla JS (see /css/styles.css and /js/app.js)
+    - Brand Green: WhatsApp Green #25D366 (change via CSS variables in styles.css)
+    - Notes: Accessible form with client-side validation and sticky callback modal for mobile.
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Sudharshan Interior Designs</title>
+  <meta name="description" content="Get a quote or request a callback. Premium cupboards, modular kitchens, doors, windows, and aluminum works.">
+  <meta name="theme-color" content="#25D366">
+  <link rel="canonical" href="https://sudharshaninteriors.example.com/contact.html">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Contact — Sudharshan Interior Designs">
+  <meta property="og:description" content="Request a quote or callback for premium interior solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sudharshaninteriors.example.com/contact.html">
+  <meta property="og:image" content="/images/hero.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="preload" as="style" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/inter/v12/UcCo3Fwr0n-yfS7i.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2" type="font/woff2" crossorigin>
+
+  <!-- PWA & Icons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a href="/" class="brand" aria-label="Sudharshan Interior Designs home">
+        <img src="/icons/logo.svg" alt="Sudharshan logo" width="32" height="32" loading="eager" decoding="async">
+        <span class="brand-name">Sudharshan Interior Designs</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a class="nav-link" href="/index.html#home">Home</a></li>
+          <li><a class="nav-link" href="/index.html#about">About</a></li>
+          <li><a class="nav-link" href="/index.html#services">Services</a></li>
+          <li><a class="nav-link" href="/index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link" aria-current="page" href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="section section-contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head">
+          <h1 id="contact-title" class="section-title">Get in Touch</h1>
+          <svg class="title-underline" width="160" height="16" viewBox="0 0 160 16" aria-hidden="true">
+            <path d="M2 8 H158" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="contact-grid">
+          <form id="contact-form" class="form" novalidate aria-describedby="form-note">
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required placeholder=" ">
+                <small class="error" id="error-name"></small>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder=" ">
+                <small class="error" id="error-email"></small>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" required inputmode="tel" placeholder=" ">
+                <small class="error" id="error-phone"></small>
+              </div>
+              <div class="field">
+                <label for="service">Service</label>
+                <div class="select-wrap">
+                  <select id="service" name="service" required>
+                    <option value="" selected disabled>Choose a service</option>
+                    <option>Modern Interior Cupboards</option>
+                    <option>Modular Kitchens</option>
+                    <option>Main Doors</option>
+                    <option>Windows</option>
+                    <option>Aluminum Works</option>
+                  </select>
+                </div>
+                <small class="error" id="error-service"></small>
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder=" "></textarea>
+              <small class="error" id="error-message"></small>
+            </div>
+            <p id="form-note">We typically respond within one business day.</p>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send</button>
+              <a class="btn btn-secondary" href="https://wa.me/919999999999" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+            <p class="form-message" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact-aside">
+            <div class="map-wrap">
+              <div class="map-placeholder" role="img" aria-label="Map placeholder">Map Preview</div>
+              <!-- Optional: Replace with an actual embed -->
+              <!-- <iframe loading="lazy" title="Location" src="https://www.google.com/maps?q=Chennai&output=embed" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            </div>
+            <div class="business-details">
+              <h2 class="sr-only">Business Details</h2>
+              <p><strong>Address</strong><br>123 Design Avenue, Chennai, TN 600001</p>
+              <p><strong>Hours</strong><br>Mon–Sat: 9:00–18:00</p>
+              <p><strong>Phone</strong><br><a href="tel:+919999999999">+91 99999 99999</a></p>
+              <p><strong>Email</strong><br><a href="mailto:hello@sudharshaninteriors.com">hello@sudharshaninteriors.com</a></p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky Request a Callback (mobile) -->
+  <button id="callback-btn" class="callback-btn" aria-haspopup="dialog" aria-controls="callback-modal">Request a Callback</button>
+  <div id="callback-modal" class="callback-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Request a Callback">
+    <div class="callback-backdrop" data-callback-close></div>
+    <div class="callback-content" role="document">
+      <button class="callback-close" aria-label="Close" data-callback-close>&times;</button>
+      <form id="callback-form" class="form" novalidate>
+        <div class="field">
+          <label for="cb-name">Name</label>
+          <input id="cb-name" name="name" type="text" required placeholder=" ">
+          <small class="error" id="error-cb-name"></small>
+        </div>
+        <div class="field">
+          <label for="cb-phone">Phone</label>
+          <input id="cb-phone" name="phone" type="tel" required inputmode="tel" placeholder=" ">
+          <small class="error" id="error-cb-phone"></small>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Request</button>
+        </div>
+        <p class="form-message" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer" data-surface="dark">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="brand">
+          <img src="/icons/logo.svg" alt="Sudharshan logo" width="32" height="32">
+          <span class="brand-name">Sudharshan Interior Designs</span>
+        </a>
+        <p>Premium interiors with uncompromising quality and precision.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Quick Links">
+        <ul>
+          <li><a href="/index.html#about">About</a></li>
+          <li><a href="/index.html#services">Services</a></li>
+          <li><a href="/index.html#portfolio">Portfolio</a></li>
+          <li><a href="/contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-newsletter">
+        <form id="newsletter-form" novalidate>
+          <label for="newsletter-email">Newsletter</label>
+          <div class="input-row">
+            <input id="newsletter-email" name="email" type="email" required placeholder=" " aria-describedby="newsletter-help">
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </div>
+          <small id="newsletter-help">We respect your privacy. No spam.</small>
+          <p class="form-message" aria-live="polite"></p>
+        </form>
+        <ul class="social">
+          <li><a href="https://wa.me/919999999999" aria-label="WhatsApp"><img src="/icons/whatsapp.svg" width="20" height="20" alt=""></a></li>
+          <li><a href="https://www.instagram.com/" aria-label="Instagram"><img src="/icons/instagram.svg" width="20" height="20" alt=""></a></li>
+          <li><a href="https://www.facebook.com/" aria-label="Facebook"><img src="/icons/facebook.svg" width="20" height="20" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-meta">
+      <p>© <span id="year"></span> Sudharshan Interior Designs. All rights reserved.</p>
+      <a class="whatsapp-cta" href="https://wa.me/919999999999" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+  </footer>
+
+  <script defer src="/js/app.js"></script>
+</body>
+</html>
